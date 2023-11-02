@@ -2,7 +2,7 @@ name: comprar-producto
 on: workflow_dispatch
 jobs:
     install-java-jdk:
-        runs-on: ['self-hosted', 'Linux', 'X64']
+        runs-on: ['ubuntu-npd']
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-java@v3
