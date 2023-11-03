@@ -5,15 +5,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-java@v3
-              with:
-                distribution: 'temurin'
-                java-version: '11'
             - name: Setup Jmeter
-              uses: tush-tr/setup-jmeter@v1.1.0
-            - name: Run Jmeter test
-              uses: rbhadti94/apache-jmeter-action@v0.5.0
+              uses: fajardodiaz/setup-jmeter@v1
               with:
-                testFilePath: comprar-producto-demo/Demo.jmx
-
-
+                jmeter_version: 5.6.2
+              
