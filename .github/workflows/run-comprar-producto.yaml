@@ -6,7 +6,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Setup Jmeter
-              uses: fajardodiaz/setup-jmeter@v1.1
+              uses: fajardodiaz/setup-jmeter@v1.2
               with:
                 jmeter_version: 5.6.2
               
