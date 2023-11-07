@@ -9,6 +9,10 @@ jobs:
             #   with:
             #     jmeter_version: 5.6.2
             - uses: actions/checkout@v4
+            - uses: actions/setup-java@v3
+              with:
+                distribution: 'temurin' # See 'Supported distributions' for available options
+                java-version: '11'
             - name: Run jmeter test
               id: jmeter-test
               shell: bash
