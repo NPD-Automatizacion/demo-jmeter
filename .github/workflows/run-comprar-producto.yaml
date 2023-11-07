@@ -2,11 +2,11 @@ name: comprar-producto
 on: workflow_dispatch
 jobs:
     install-java-jdk:
-        runs-on: ubuntu-latest
+        runs-on: [self-hosted, linux, X64]
         steps:
             - uses: actions/checkout@v4
             - name: Setup Jmeter
               uses: fajardodiaz/setup-jmeter@v1.2
               with:
                 jmeter_version: 5.6.2
-              
+                
