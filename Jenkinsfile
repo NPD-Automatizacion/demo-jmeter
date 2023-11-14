@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('cd into test folder'){
             steps{
-                sh 'cd $WORKSPACE/demo-jmeter/comprar-producto-demo'
+                sh 'cd $WORKSPACE/comprar-producto-demo'
             }
         }
         stage('execute test'){
