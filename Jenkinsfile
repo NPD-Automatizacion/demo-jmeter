@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage('cd into folder'){
+        stage('cd into test folder'){
             steps{
-                sh 'cd comprar-producto-demo'
+                sh 'cd $WORKSPACE/demo-jmeter/comprar-producto-demo'
             }
         }
         stage('execute test'){
