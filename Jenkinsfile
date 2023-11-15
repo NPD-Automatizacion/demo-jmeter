@@ -1,11 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage('clean workspace before'){
-            steps{
-                cleanWs()
-            }
-        }
         stage('comprar producto - test'){
             steps{
                 sh 'cd $WORKSPACE/comprar-producto-demo && /opt/apache-jmeter-5.6.2/bin/jmeter -n -t Demo.jmx'
