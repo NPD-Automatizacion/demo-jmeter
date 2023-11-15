@@ -14,7 +14,7 @@ pipeline{
         }
         stage('upload logs to s3'){
             steps{
-                sh 'aws s3 copy $WORKSPACE/generar-data-demo s3://cidemo-npd/$BUILD_NUMBER --recursive  && aws s3 copy $WORKSPACE/comprar-producto-demo s3://cidemo-npd/$BUILD_NUMBER --recursive'
+                sh 'aws s3 cp $WORKSPACE/generar-data-demo s3://cidemo-npd/$BUILD_NUMBER --recursive  && aws s3 copy $WORKSPACE/comprar-producto-demo s3://cidemo-npd/$BUILD_NUMBER --recursive'
             }
         }
         stage('clean workspace after'){
